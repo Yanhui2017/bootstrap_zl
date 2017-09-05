@@ -12,12 +12,21 @@
         <button class="row">2</button>
         <button class="row">3</button>
     </div>
+    <ui id="tab">
+        <li><button class="button">1</button></li>
+        <li><button class="button">2</button></li>
+        <li><button class="button">3</button></li>
+    </ul>
 </body>
 <script src="./js/jquery.1.9.min.js"></script>
 <script>
     $(document).ready(function(){
         $('#row-parent').delegate('.row','click',function(){
             console.log($(this).index());
+        })
+
+        $('.button').click(function(){
+            console.log($('.button').index($(this)));
         })
     })
 </script>
